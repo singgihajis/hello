@@ -1,97 +1,149 @@
-<div id="formDiv">
-<!-- Form div will be hidden after form submission -->
-<!--  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU/AMS///9k=">  -->
-<div id="titleOfForm">Title of Input Form</div>
-
-<div id="msgToUsr"></div>
-
-<form id="myForm">
-<h1>Title Here<span>Description Line under the title put here!</span></h1>
-<section> <span>1</span>Personal details</section>
-    Full name: <input type="text" name="name" onchange="clearIt(this)" placeholder="First name & Last name"/><br/>
-    Date of birth: <input type="text" name="birth" onchange="clearIt(this)" placeholder="dd/mm/yyyy"/><br/>
-    Nationality:  <select name="nationality" onchange="clearIt(this)">
-    <option>Test1</option>
-    <option>Test2</option>
-    <option>Test3</option>
-     </select><br/>
-     Marital status:  <select name="marital">
-    <option>...</option>
-    <option>Married</option>
-    <option>Single</option>
-         </select><br/>
-    Please state the age of your children who will be registered in our school: <input type="text" name="children" placeholder="Example: 5;9;12 or 0"/><br/>
-
-    <section> <span>2</span>Experiences and qualifications</section>
-    Years of experience:  <select name="years" onchange="clearIt(this)">
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-    <option>10+</option>
-    </select><br/>
-    Highest qualification obtained: <input type="text" name="qualification" placeholder="Example: Degree, Master, .."/><br/>
-    Educational qualification obtained: <input type="text" name="educational" onchange="clearIt(this)" placeholder="Example: QTS,PGCE,CELTA, .."/><br/>
-    English language level:  <select name="profiency">
-    <option>...</option>
-    <option>Fluent English proficient</option>
-    <option>Advanced</option>
-     <option>Intermediate</option>
-    <option>Early intermediate</option>
-    <option>Beginner</option>
-    </select><br/>
-    <section  onchange="clearIt(this)"> <span>3</span>Position applied for</section>
-    Subject:  <select name="subject">
-    <optgroup label="Teaching">
-    <option>...</option>
-    <option>Arts</option>
-    <option>Biology</option>
-    <option>Chemistry</option>
-    <option>Computer Science</option>
-    <option>English</option>
-    <option>Math</option>
-    <option>Physics</option>
-    <option>Science</option>
-    <option>Social Studies</option>
-    </optgroup>
-    <optgroup label="Other">
-    <option>...</option>
-    <option>Principal</option>
-    <option>Deputy principal</option>
-    <option>Educational spervisor</option>
-    </optgroup>
-    </select><br/>
-    Grade level ( or Section):  <select name="grade"  onchange="clearIt(this)">
-    <option>...</option>
-    <option>Higher grades</option>
-    <option>Lower grades</option>
-    <option>IGCSE</option>
-    <option>AS</option>
-    <option>A2</option>
-    <option>SAT</option>
-    </select><br/>
-<section  onchange="clearIt(this)"> <span>4</span>Contact details</section>
-    Email: <input type="email" name="email" placeholder="example@domain.com"/><br/>
-    Phone number: <input type="text" name="phone" onchange="clearIt(this)" placeholder="[+]code country/phone number"/><br/>
-    Skype: <input type="text" name="skype" onchange="clearIt(this)" placeholder="username"/><br/>
-<section> <span>5</span>Attachments</section>
-    CV (pdf/doc/docx only): <input type="file" name="myFile1" onchange="clearIt(this)"/><br/>
-    Qualification (scan): <input type="file" name="myFile2" onchange="clearIt(this)"/><br/>
-    Other qualification (scan): <input type="file" name="myFile3" onchange="clearIt(this)"/><br/>
-    Passport (scan): <input type="file" name="myFile4" onchange="clearIt(this)"/><br/>
-    <input type="button" value="Apply" onmouseup="submitForm(this.parentNode)" /><br/>
-</form>
-</div>
-
-<div id="inProgress" style="display: none;">
-<!-- Progress starts hidden, but will be shown after form submission. -->
-Uploading. Please wait...
-</div>
-
-<div id="output">
-  <!-- Blank div will be filled with "Thanks.html" after form submission. -->
-</div>
+    <div class="container" id="formDiv">
+    <div id="titleOfForm">
+    <svg viewBox="0 0 600 300">
+      <!-- Symbol-->
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="50%" dy=".35em">BOOTSTRAP FORM</text>
+      </symbol>
+      <!-- Duplicate symbols-->
+      <use xlink:href="#s-text" class="display-6"></use>
+      <use xlink:href="#s-text" class="display-6"></use>
+      <use xlink:href="#s-text" class="display-6"></use>
+      <use xlink:href="#s-text" class="display-6"></use>
+      <use xlink:href="#s-text" class="display-6"></use>
+    </svg>
+    </div>
+    <div id="msgToUsr"></div>
+        <form id="myForm">
+            <div class="breadcrumb"><span class="btn btn-success">1</span><span class="display-5"> Data Pribadi</span></div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-1">Nama Lengkap:</label>
+                <input class="form-control" type="text" name="name" onchange="clearIt(this)" placeholder="Nama Lengkap tanpa gelar" id="field-1"
+                />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-2"> Tanggal Lahir:</label>
+                <input class="form-control" type="text" name="birthdate" onchange="clearIt(this)" placeholder="dd/mm/yyyy" id="field-2" />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-3"> Tempat Lahir:</label>
+                <input class="form-control" type="text" name="birthplace" onchange="clearIt(this)" placeholder="Kota Yogyakarta" id="field-3"
+                />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-4"> Jenis Kelamin:</label>
+                <select class="form-control" name="gender" onchange="clearIt(this)" id="field-4">
+                                                <option>Lainnya</option>
+                                                <option>Laki-laki</option>
+                                                <option>Perempuan</option>
+                                    </select>
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-5"> Status:</label>
+                <select class="form-control" name="marital" id="field-5">
+                                                <option>Lainnya</option>
+                                                <option>Married</option>
+                                                <option>Single</option>
+                                    </select>
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-6"> Agama dan Kepercayaan:</label>
+                <select class="form-control" name="belief" onchange="clearIt(this)" id="field-6">
+                                                <option>Islam</option>
+                                                <option>Kristen</option>
+                                                <option>Protestan</option>
+                                                <option>Katolik</option>
+                                                <option>Hindu</option>
+                                                <option>Buddha</option>
+                                                <option>Kong Hu Cu</option>
+                                    </select>
+            </div>
+            <div class="breadcrumb"><span class="btn btn-warning">2</span><span class="display-5"> Alamat Lengkap</span></div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="7"> Tempat Tinggal di Yogyakarta:</label>
+                <input class="form-control" type="text" name="address" placeholder="Contoh: Karangmalang, Blok E, 20" id="field-7" />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-8"> Jarak Tempat Tinggal ke Limuny:</label>
+                <input class="form-control" type="text" name="trip" placeholder="Contoh: 5km;9km;12km atau 0km" id="field-8" />
+            </div>
+            <div class="breadcrumb"><span class="btn btn-danger">3</span><span class="display-5"> Pendidikan</span></div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-9"> Jalur Pendidikan:</label>
+                <input class="form-control" type="text" name="qualification" placeholder="Contoh: S1, S2, D3,.." id="field-9" />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-10"> Jurusan:</label>
+                <input class="form-control" type="text" name="educational" onchange="clearIt(this)" placeholder="Contoh: Ilmu Akuntasi, Pendidikan Bahasa Inggris, Ilmu Administrasi Negara"
+                    id="field-10" />
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-11"> Fakultas:</label>
+                <select class="form-control" name="subject" id="field-11">
+                                                    <optgroup label="Fakultas">
+                                                        <option>...</option>
+                                                        <option>Fakultas Ilmu Pendidikan (FIP)</option>
+                                                        <option>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</option>
+                                                        <option>Fakultas Bahasa dan Seni (FBS)</option>
+                                                        <option>Fakultas Ilmu Sosial (FIS)</option>
+                                                        <option>Fakultas Ilmu Sosial (FIS)</option>
+                                                        <option>Fakultas Teknik (FT)</option>
+                                                        <option>Fakultas Ilmu Keolahragaan (FIK)</option>
+                                                        <option>Fakultas Ekonomi (FE)</option>
+                                                        <option>Program Pascasarjana (PPs)</option>
+                                                    </optgroup>
+                                                    <optgroup label="Other">
+                                                        <option>...</option>
+                                                        <option>Yudisium</option>
+                                                        <option>PLS</option>
+                                                        <option>Wisuda</option>
+                                                    </optgroup>
+                                    </select>
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-12"> Indeks Prestasi Kumulatif:</label>
+                <select class="form-control" name="profiency" id="field-12">
+                                                    <option>...</option>
+                                                    <option>kurang dari 3.00</option>
+                                                    <option>dibawah 3.25</option>
+                                                    <option>dibawah 3.50</option>
+                                                    <option>dibawah 3.75</option>
+                                                    <option>dibawah s4.00</option>
+                                    </select>
+            </div>
+            <div class="form-group col-auto">
+                <label class="form-control-label" for="field-13"> Tahun Ajaran (Angkatan):</label>
+                <select class="form-control" name="grade" onchange="clearIt(this)" id="field-13">
+                                                    <option>...</option>
+                                                    <option>2011</option>
+                                                    <option>2012</option>
+                                                    <option>2013</option>
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                    </select>
+            </div>
+            <div class="breadcrumb"><span class="btn btn-info">4</span><span class="display-5"> Kontak</span></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-14">Email:</label><input class="form-control" type="email" name="email"
+                    placeholder="example@domain.com" id="field-14" /></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-15"> Nomor Telepon:</label><input class="form-control" type="text"
+                    name="phone" onchange="clearIt(this)" placeholder="+628910111213" id="field-15" /></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-16"> Twitter atau Facebook:</label><input class="form-control" type="text"
+                    name="sosmed" onchange="clearIt(this)" placeholder="username" id="field-16" /></div>
+            <div class="breadcrumb"><span class="btn btn-primary">5</span><span class="display-5"> Lampiran</span></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-17">CV (pdf/doc/jpeg only):</label><input class="form-control" type="file"
+                    name="myFile1" onchange="clearIt(this)" id="field-17" /></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-18"> Sertifikat Panitia Kegiatan (scan):</label><input class="form-control"
+                    type="file" name="myFile2" onchange="clearIt(this)" id="field-18" /></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-19"> Sertifikat Organisasi (scan):</label><input class="form-control"
+                    type="file" name="myFile3" onchange="clearIt(this)" id="field-19" /></div>
+            <div class="form-group col-auto"><label class="form-control-label" for="field-20"> Penghargaan (scan):</label><input class="form-control" type="file"
+                    name="myFile4" onchange="clearIt(this)" id="field-20" /></div>
+            <input class="btn btn-secondary btn-lg btn-block" type="button" value="Apply" onmouseup="submitForm(this.parentNode)" />
+        </form>
+    </div>
+    <div id="inProgress" style="display: none;">
+        Sedang mengunggah. Tunggu sebentar!
+    </div>
+    <div id="output">
+    </div>
