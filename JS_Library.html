@@ -1,27 +1,24 @@
 <script>
-window.AlanWells_shwSpnr = function(a,b) {
-//console.log('a: ' + a)
-  AlanWells_displayinline(a);
-  var daSpinHtml = '<div><img src="progress.gif"></div>';
-  AlanWells_inHtml(a,daSpinHtml);
+window.loadingPage_shwSpnr = function (a, b) {
+    loadingPage_displayinline(a);
+    var dotLoader = '<div><img src="XXX://XXX.XXX/Color-Dots-Loader.gif"></div>';
+    loadingPage_inHtml(a, dotLoader);
 };
 
-window.AlanWells_hideSpnr = function(a,b) {
-  AlanWells_inHtml(a,"");//If spinner was displayed, make sure it gets turned off
-  AlanWells_hide(a);
+window.loadingPage_hideSpnr = function (a, b) {
+    loadingPage_inHtml(a, "");
+    loadingPage_hide(a);
 };
 
-window.AlanWells_displayinline = function(a) {
-  document.getElementById(a).style.display = "inline";
+window.loadingPage_displayinline = function (a) {
+    document.getElementById(a).style.display = "inline";
 };
 
-window.AlanWells_inHtml = function(a,b) {
-  document.getElementById(a).innerHTML = b;
+window.loadingPage_inHtml = function (a, b) {
+    document.getElementById(a).innerHTML = b;
 };
 
-window.AlanWells_hide = function(a) {
-  document.getElementById(a).style.display = "none";
+window.loadingPage_hide = function (a) {
+    document.getElementById(a).style.display = "none";
 };
 </script>
-
-
