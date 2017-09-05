@@ -2,7 +2,7 @@
 <html>
   <head>
     <base target="_top">
-    <!-- Use a templated HTML printing scriptlet to import stylesheet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?!= HtmlService.createHtmlOutputFromFile('CSS_Main_Form').getContent(); ?>
     <?!= HtmlService.createHtmlOutputFromFile('CSS_Generic').getContent(); ?>
   </head>
@@ -10,7 +10,6 @@
     <?!= HtmlService.createHtmlOutputFromFile('HTML_Body').getContent(); ?>
   </body>
   
-  <!-- Use a templated HTML printing scriptlet to import JavaScript. -->
   <?!= HtmlService.createHtmlOutputFromFile('JS_Main_Form').getContent(); ?>
   <?!= HtmlService.createHtmlOutputFromFile('JS_Library').getContent(); ?>
   
