@@ -1,0 +1,27 @@
+<script>
+window.AlanWells_shwSpnr = function(a,b) {
+//console.log('a: ' + a)
+  AlanWells_displayinline(a);
+  var daSpinHtml = '<div><img src="progress.gif"></div>';
+  AlanWells_inHtml(a,daSpinHtml);
+};
+
+window.AlanWells_hideSpnr = function(a,b) {
+  AlanWells_inHtml(a,"");//If spinner was displayed, make sure it gets turned off
+  AlanWells_hide(a);
+};
+
+window.AlanWells_displayinline = function(a) {
+  document.getElementById(a).style.display = "inline";
+};
+
+window.AlanWells_inHtml = function(a,b) {
+  document.getElementById(a).innerHTML = b;
+};
+
+window.AlanWells_hide = function(a) {
+  document.getElementById(a).style.display = "none";
+};
+</script>
+
+

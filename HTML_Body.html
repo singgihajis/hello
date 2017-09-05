@@ -1,0 +1,97 @@
+<div id="formDiv">
+<!-- Form div will be hidden after form submission -->
+<!--  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU/AMS///9k=">  -->
+<div id="titleOfForm">Title of Input Form</div>
+
+<div id="msgToUsr"></div>
+
+<form id="myForm">
+<h1>Title Here<span>Description Line under the title put here!</span></h1>
+<section> <span>1</span>Personal details</section>
+    Full name: <input type="text" name="name" onchange="clearIt(this)" placeholder="First name & Last name"/><br/>
+    Date of birth: <input type="text" name="birth" onchange="clearIt(this)" placeholder="dd/mm/yyyy"/><br/>
+    Nationality:  <select name="nationality" onchange="clearIt(this)">
+    <option>Test1</option>
+    <option>Test2</option>
+    <option>Test3</option>
+     </select><br/>
+     Marital status:  <select name="marital">
+    <option>...</option>
+    <option>Married</option>
+    <option>Single</option>
+         </select><br/>
+    Please state the age of your children who will be registered in our school: <input type="text" name="children" placeholder="Example: 5;9;12 or 0"/><br/>
+
+    <section> <span>2</span>Experiences and qualifications</section>
+    Years of experience:  <select name="years" onchange="clearIt(this)">
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>10+</option>
+    </select><br/>
+    Highest qualification obtained: <input type="text" name="qualification" placeholder="Example: Degree, Master, .."/><br/>
+    Educational qualification obtained: <input type="text" name="educational" onchange="clearIt(this)" placeholder="Example: QTS,PGCE,CELTA, .."/><br/>
+    English language level:  <select name="profiency">
+    <option>...</option>
+    <option>Fluent English proficient</option>
+    <option>Advanced</option>
+     <option>Intermediate</option>
+    <option>Early intermediate</option>
+    <option>Beginner</option>
+    </select><br/>
+    <section  onchange="clearIt(this)"> <span>3</span>Position applied for</section>
+    Subject:  <select name="subject">
+    <optgroup label="Teaching">
+    <option>...</option>
+    <option>Arts</option>
+    <option>Biology</option>
+    <option>Chemistry</option>
+    <option>Computer Science</option>
+    <option>English</option>
+    <option>Math</option>
+    <option>Physics</option>
+    <option>Science</option>
+    <option>Social Studies</option>
+    </optgroup>
+    <optgroup label="Other">
+    <option>...</option>
+    <option>Principal</option>
+    <option>Deputy principal</option>
+    <option>Educational spervisor</option>
+    </optgroup>
+    </select><br/>
+    Grade level ( or Section):  <select name="grade"  onchange="clearIt(this)">
+    <option>...</option>
+    <option>Higher grades</option>
+    <option>Lower grades</option>
+    <option>IGCSE</option>
+    <option>AS</option>
+    <option>A2</option>
+    <option>SAT</option>
+    </select><br/>
+<section  onchange="clearIt(this)"> <span>4</span>Contact details</section>
+    Email: <input type="email" name="email" placeholder="example@domain.com"/><br/>
+    Phone number: <input type="text" name="phone" onchange="clearIt(this)" placeholder="[+]code country/phone number"/><br/>
+    Skype: <input type="text" name="skype" onchange="clearIt(this)" placeholder="username"/><br/>
+<section> <span>5</span>Attachments</section>
+    CV (pdf/doc/docx only): <input type="file" name="myFile1" onchange="clearIt(this)"/><br/>
+    Qualification (scan): <input type="file" name="myFile2" onchange="clearIt(this)"/><br/>
+    Other qualification (scan): <input type="file" name="myFile3" onchange="clearIt(this)"/><br/>
+    Passport (scan): <input type="file" name="myFile4" onchange="clearIt(this)"/><br/>
+    <input type="button" value="Apply" onmouseup="submitForm(this.parentNode)" /><br/>
+</form>
+</div>
+
+<div id="inProgress" style="display: none;">
+<!-- Progress starts hidden, but will be shown after form submission. -->
+Uploading. Please wait...
+</div>
+
+<div id="output">
+  <!-- Blank div will be filled with "Thanks.html" after form submission. -->
+</div>
