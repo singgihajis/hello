@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <base target="_top">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?!= HtmlService.createHtmlOutputFromFile('CSS_Main_Form').getContent(); ?>
-    <?!= HtmlService.createHtmlOutputFromFile('CSS_Generic').getContent(); ?>
+  <head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <?!= HtmlService.createHtmlOutputFromFile('main_css').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('spinner_css').getContent(); ?>
   </head>
   <body>
-    <?!= HtmlService.createHtmlOutputFromFile('HTML_Body').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('body').getContent(); ?>
   </body>
-  
-  <?!= HtmlService.createHtmlOutputFromFile('JS_Main_Form').getContent(); ?>
-  <?!= HtmlService.createHtmlOutputFromFile('JS_Library').getContent(); ?>
-  
+  <?!= HtmlService.createHtmlOutputFromFile('form_js').getContent(); ?>
+  <?!= HtmlService.createHtmlOutputFromFile('spinner_js').getContent(); ?>
   <div id="idSpnr" class="spinner"></div>
 </html>

@@ -1,0 +1,78 @@
+<div class="container" id="formDiv">
+        <div id="titleOfForm"></div>
+        <div class="alert alert-warning" role="alert" id="msgToUsr"></div>
+        <form id="myForm">
+            <h1>Form Laporan Teknisi</h1>
+            <section class="breadcrumb"><span class="btn btn-outline-danger">1</span> Data Pelanggan</section>
+            <div class="form-group col-auto"><label for="1">Nama Toko/Instansi:</label><input class="form-control" type="text" name="name" onchange="clearIt(this)"
+                    placeholder="Nama Toko" id="1" />
+            </div>
+            <div class="form-group col-auto"><label for="2">Nama Pemilik:</label><input class="form-control" type="text" name="owner" onchange="clearIt(this)"
+                    placeholder="Nama Pemilik/Pimpinan/Pejabat" id="2" />
+            </div>
+            <div class="form-group col-auto"><label for="3">Alamat:</label><input class="form-control" type="text" name="address" onchange="clearIt(this)"
+                    placeholder="Alamat Lengkap" id="3" />
+            </div>
+            <div class="form-group col-auto"><label for="8">Kontak:</label>
+                <input class="form-control" type="text" name="phone2" onchange="clearIt(this)" placeholder="+628*********" id="8" />
+            </div>
+            <div class="form-group col-auto"><label for="4">Bentuk Usaha:</label>
+                <select class="form-control" name="business" onchange="clearIt(this)" id="4">
+                    <option>Umum</option>
+                    <option>Copy Center</option>
+                    <option>Instansi Swasta</option>
+                    <option>Instansi Pemerintah</option>          
+                    <option>Sekolah/Universitas</option>
+                    <option>Bimbingan Belajar</option>
+                    <option>Toko/Swalayan</option>
+                    <option>Koperasi</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+            <section class="breadcrumb"><span class="btn btn-outline-warning">2</span> Data Mesin:</section>
+            <div class="form-group col-auto"><label for="5">Kerusakan Mesin:</label>
+                <select class="form-control" name="status" id="5">
+                    <option>Tidak Ada</option>
+                    <option>Paper Jam</option>
+                    <option>Toner Jatuh</option>
+                    <option>Gagal Booting</option>          
+                    <option>Tidak Mau Menyala</option>
+                    <option>Spare Part Minta Ganti</option>
+                    <option>Maintenance Rutin</option>
+                    <option>Overhaule</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>            
+            <div class="form-group col-auto">
+                <label for="7">Jenis Mesin:</label>
+                <select class="form-control" name="phone1" id="7">            
+                    <option>Konica Minolta BH 423</option>
+                    <option>Konica Minolta BH 452/552/652</option>
+                    <option>Konica Minolta BH 751/601</option>
+                    <option>Konica Minolta BH 750/600</option>
+                    <option>Canon IR 3235/3245</option>            
+                    <option>Canon IR 6575i</option>
+                    <option>Canon IR 5570</option>
+                    <option>Canon IR 3570</option>
+                    <option>Canon IR 6000</option>
+                    <option>Canon IR 5000</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+            <section class="breadcrumb"><span class="btn btn-outline-success">3</span> Lampiran</section>
+            <div class="form-group col-auto"><label for="9">Foto (Spare Part/Kerusakan):</label>
+                <input class="form-control" type="file" name="myFile1" onchange="clearIt(this)" id="9" />
+            </div>
+            <section class="breadcrumb"><span class="btn btn-outline-info">4</span> Lainnya</section>
+            <div class="form-group col-auto"><label for="10">Informasi Pengisi:</label>
+                <input class="form-control" type="text" name="salesman" onchange="clearIt(this)" placeholder="Nama Teknisi" id="10" />
+            </div>
+            <input type="button" class="btn btn-outline-primary btn-lg btn-block" value="Laporkan" onmouseup="submitForm(this.parentNode)"/>
+            <br/>
+        </form>
+    </div>
+    <div class="alert alert-light" role="alert" id="inProgress" style="display: none;">
+        Sedang mengunggah. Tunggu sebentar!
+    </div>
+    <div id="output">
+    </div>
