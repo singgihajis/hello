@@ -49,7 +49,7 @@ window.submitForm = function (myForm) {
     if (die) return;
 
     toggle_visibility('formDiv');
-    loadingPage_shwSpnr('idLoad');
+    loadingPage_shwSpnr('idSpnr');
 
     google.script.run
         .withSuccessHandler(updateOutput)
@@ -70,7 +70,7 @@ function updateOutput(dataReturned) {
     };
     outputDiv = document.getElementById('output');
     outputDiv.innerHTML = html;
-    loadingPage_hideSpnr('idLoad');
+    loadingPage_hideSpnr('idSpnr');
 }
 
 function toggle_visibility(id) {
