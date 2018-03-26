@@ -1,0 +1,101 @@
+<div id="formDiv">
+    <div id="titleOfForm"></div>
+    <div id="msgToUsr"></div>
+    <form id="myForm">
+        <h1>Penerimaan Operator Baru XXIV<span>Layanan Internet Mahasiswa UNY</span></h1><br/>
+        <section><span>1</span>Data Pribadi</section>
+        Nama Lengkap:
+        <input type="text" name="name" id="fol" onchange="clearIt(this)" placeholder="Nama Lengkap tanpa gelar" />
+        <br/> Tanggal Lahir:
+        <input type="text" name="birthdate" onchange="clearIt(this)" placeholder="dd/mm/yyyy" />
+        <br/> Tempat Lahir:
+        <input type="text" name="birthplace" onchange="clearIt(this)" placeholder="Kota Yogyakarta" />
+        <br/> Jenis Kelamin:
+        <select name="gender" onchange="clearIt(this)">
+            <option>...</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+        </select>
+        <br/> Status:
+        <select name="marital">
+            <option>...</option>
+            <option>Married</option>
+            <option>Single</option>
+        </select>
+        <br/> Agama dan Kepercayaan:
+        <select name="belief" onchange="clearIt(this)">
+            <option>Islam</option>
+            <option>Protestan</option>
+            <option>Katolik</option>
+            <option>Hindu</option>
+            <option>Buddha</option>
+            <option>Kong Hu Cu</option>
+            <option>Kepercayaan</option>
+        </select><br/>
+        <section><span>2</span>Alamat Lengkap</section>
+        <br/> Tempat Tinggal di Yogyakarta:
+        <input type="text" name="address" placeholder="Contoh: Karangmalang, Blok E, 20" />
+        <br/> Jarak Tempat Tinggal ke Limuny:
+        <input type="text" name="trip" placeholder="Contoh: 5km;9km;12km atau 0km" /><br/>
+        <section onchange="clearIt(this)"><span>3</span>Pendidikan</section>
+        <br/> Jenjang Pendidikan:
+        <input type="text" name="qualification" placeholder="Contoh: S1, D3,.." />
+        <br/> Jurusan:
+        <input type="text" name="educational" onchange="clearIt(this)" placeholder="Contoh: Akuntasi, Pendidikan Bahasa Inggris, Ilmu Administrasi Negara, .." />
+        <br/> Fakultas:
+        <select name="subject">
+            <optgroup label="Fakultas">
+                <option>...</option>
+                <option>Fakultas Ilmu Pendidikan (FIP)</option>
+                <option>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</option>
+                <option>Fakultas Bahasa dan Seni (FBS)</option>
+                <option>Fakultas Ilmu Sosial (FIS)</option>                
+                <option>Fakultas Teknik (FT)</option>
+                <option>Fakultas Ilmu Keolahragaan (FIK)</option>
+                <option>Fakultas Ekonomi (FE)</option>
+            </optgroup>
+        </select>
+        <br/> Indeks Prestasi Kumulatif:
+        <select name="profiency">
+            <option>...</option>
+            <option>< 3.00</option>
+            <option><=3.25</option>
+            <option><=3.50</option>
+            <option><=3.75</option>
+            <option><=4.00</option>
+        </select>
+        <br/> Jumlah SKS yang belum diambil:
+        <input type="text" name="sks" placeholder="Contoh: 76 SKS,25 SKS,.." />
+        <br/> Tahun Ajaran (Angkatan):
+        <select name="grade" onchange="clearIt(this)">
+            <option>...</option>
+            <option>2013</option>
+            <option>2014</option>
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+        </select><br/>
+        <section onchange="clearIt(this)"><span>4</span>Kontak</section>
+        Email:
+        <input type="email" name="email" placeholder="example@domain.com" />
+        <br/> Nomor Telepon (Whatapps):
+        <input type="text" name="phone" onchange="clearIt(this)" placeholder="+628910111213" />
+        <section><span>5</span>Lampiran</section>
+        CV (pdf/doc/jpeg only):
+        <input type="file" name="myFile1" onchange="clearIt(this)" />
+        <br/> Kartu Tanda Mahasiswa:
+        <input type="file" name="myFile2" onchange="clearIt(this)" />
+        <br/> Foto Terbaru:
+        <input type="file" name="myFile3" onchange="clearIt(this)" />
+        <br/> Sertifikat Panitia Kegiatan:
+        <input type="file" name="myFile4" onchange="clearIt(this)" />
+        <br/>
+        <input type="button" value="Apply" onmouseup="submitForm(this.parentNode)" />
+        <br/>
+    </form>
+</div>
+<div id="inProgress" style="display: none;">
+    Uploading. Please wait...
+</div>
+<div id="output">
+</div>

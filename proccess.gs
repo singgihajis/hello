@@ -1,10 +1,11 @@
 function processForm(theForm) {
     var allTheData, doc, doc2, doc3, doc4, fileBlob, fileBlob2, fileBlob3, fileBlob4, folder, name, sheet, targetRange, template;
-    var name, birthdate, birthplace, gender, marital, address, trip, belief, qualification, educational, subject, profiency, grade, email, phone, sosmed, myFile1;
+    var name, birthdate, birthplace, gender, marital, address, trip, belief, qualification, educational, sks,subject, profiency, grade, email, phone, sosmed, myFile1;
     var fileUrl, fileUrl2, fileUrl3, fileUrl4;
     var arrayOfNamesToWriteToSS, i, L, outerArray, innerArray, thisKey, TS;
-
-    arrayOfNamesToWriteToSS = ['name', 'birthdate', 'birthplace', 'gender', 'marital', 'address', 'trip', 'belief', 'qualification', 'educational', 'subject', 'profiency', 'grade', 'email', 'phone', 'sosmed', 'myFile1'];
+    
+    arrayOfNamesToWriteToSS = ['name', 'birthdate', 'birthplace', 'gender', 'marital', 'address', 'trip', 'belief', 'qualification', 'sks', 'educational', 'subject', 'profiency', 'grade', 'email', 'phone', 'sosmed', 'myFile1'
+    ];
     L = arrayOfNamesToWriteToSS.length;
 
     fileBlob = theForm.myFile1;
@@ -23,22 +24,14 @@ function processForm(theForm) {
         folder = DriveApp.getRootFolder();
     };
 
-    if (fileBlob.name) {
-        doc = folder.createFile(fileBlob);
-        fileUrl = doc.getUrl();
-    };
-    if (fileBlob2.name) {
-        doc2 = folder.createFile(fileBlob2);
-        fileUrl2 = doc2.getUrl();
-    }
-    if (fileBlob3.name) {
-        doc3 = folder.createFile(fileBlob3);
-        fileUrl3 = doc3.getUrl();
-    }
-    if (fileBlob4.name) {
-        doc4 = folder.createFile(fileBlob4);
-        fileUrl4 = doc4.getUrl();
-    }
+    if (fileBlob.name) { doc = folder.createFile(fileBlob);
+        fileUrl = doc.getUrl(); };
+    if (fileBlob2.name) { doc2 = folder.createFile(fileBlob2);
+        fileUrl2 = doc2.getUrl(); }
+    if (fileBlob3.name) { doc3 = folder.createFile(fileBlob3);
+        fileUrl3 = doc3.getUrl(); }
+    if (fileBlob4.name) { doc4 = folder.createFile(fileBlob4);
+        fileUrl4 = doc4.getUrl(); }
 
     template = HtmlService.createHtmlOutputFromFile('feedback').getContent();
 
@@ -69,8 +62,7 @@ function processForm(theForm) {
     };
 
     if (!SPREADSHEET_FILE_ID) {
-        return ['err', 'No Spreadsheet ID', template]
-    };
+        return ['err', 'No Spreadsheet ID', template] };
 
     sheet = SpreadsheetApp.openById(SPREADSHEET_FILE_ID).getSheetByName(SHEET_NAME_TO_WRITE_DATA_TO);
     sheet.appendRow(innerArray);

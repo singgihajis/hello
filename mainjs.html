@@ -1,17 +1,16 @@
 <script>
-    window.clearIt = function (thisEl) {
-    document.getElementById('msgToUsr').style.display = 'none';
-    thisEl.style.backgroundColor = "";
-};
+    window.clearIt = function(thisEl) {
+        document.getElementById('msgToUsr').style.display = 'none';
+        thisEl.style.backgroundColor = "";
+    };
 
-window.submitForm = function (myForm) {
+window.submitForm = function(myForm) {
     var key, value, requiredList = [],
         nameName, thisEl, errElmt, inputType, die;
     die = false;
 
     requiredList = ['address', 'name', 'birthdate', 'birthplace', 'gender', 'marital', 'belief', 'qualification',
-        'educational', 'subject', 'profiency', 'email', 'phone', 'sosmed', 'myFile1'
-    ];
+        'educational', 'subject', 'profiency', 'email', 'phone', 'sosmed', 'myFile1'];
 
     for (key in myForm) {
 
@@ -20,28 +19,29 @@ window.submitForm = function (myForm) {
 
         nameName = thisEl.name;
         if (requiredList.indexOf(nameName) === -1) {
-            continue;
-        };
+            continue; 
+            };
 
         value = thisEl.value;
         inputType = thisEl.type;
 
         if (value === "") {
             if (requiredList.indexOf(nameName) === -1) {
-                continue;
-            };
-            die = true;            
+                continue; 
+                };
+            die = true;
+            toggle_visibility('inProgress');
             toggle_visibility('formDiv');
 
             thisEl.style.backgroundColor = "red";
             thisEl.focus();
             window.scrollTo(0, 0);
             errElmt = document.getElementById('msgToUsr');
-            errElmt.textContent = "Required Field is Empty! Complete Empty Field to Apply.";
+            errElmt.textContent = "Required Field is Empty!  click this message to close";
             errElmt.style.display = 'inline-block';
-            errElmt.style.top = "15%";
-            errElmt.addEventListener("click", function () {
-                this.style.display = "none";
+            errElmt.style.top = "45%";
+            errElmt.addEventListener("click", function() {
+            this.style.display = "none";
             });
         };
     };
@@ -49,7 +49,8 @@ window.submitForm = function (myForm) {
     if (die) return;
 
     toggle_visibility('formDiv');
-    loadingPage_shwSpnr('idLoad');
+    toggle_visibility('inProgress');
+    Muben_shwSpnr('idLoad');
 
     google.script.run
         .withSuccessHandler(updateOutput)
@@ -68,9 +69,10 @@ function updateOutput(dataReturned) {
     } else {
         html = dataReturned;
     };
+    toggle_visibility('inProgress');
     outputDiv = document.getElementById('output');
     outputDiv.innerHTML = html;
-    loadingPage_hideSpnr('idLoad');
+    Muben_hideSpnr('idLoad');
 }
 
 function toggle_visibility(id) {

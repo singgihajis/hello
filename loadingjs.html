@@ -1,0 +1,24 @@
+<script>
+    window.Muben_shwSpnr = function(a, b) {
+        Muben_displayinline(a);
+        var loadingHtml = '<div><img src="https://2.bp.blogspot.com/-1j_kRXMdZFU/V7_vlEX5yoI/AAAAAAAAATI/tNV50G3XU40J0YNoM2uEvis9RjMS9iWEQCLcB/s1600/progress.gif"></div>';
+        Muben_inHtml(a, loadingHtml);
+    };
+
+window.Muben_hideSpnr = function(a, b) {
+    Muben_inHtml(a, "");
+    Muben_hide(a);
+};
+
+window.Muben_displayinline = function(a) {
+    document.getElementById(a).style.display = "inline";
+};
+
+window.Muben_inHtml = function(a, b) {
+    document.getElementById(a).innerHTML = b;
+};
+
+window.Muben_hide = function(a) {
+    document.getElementById(a).style.display = "none";
+}; 
+</script>
