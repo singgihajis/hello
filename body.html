@@ -1,20 +1,22 @@
 <div class="container-fluid" id="formDiv">
     <div id="titleOfForm">
-       
+
     </div>
-    <div class="container" ><svg viewBox="0 0 600 300">
-        <!-- Symbol-->
-        <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%" dy=".35em">BOOTSTRAP FORM</text>
-        </symbol>
-        <!-- Duplicate symbols-->
-        <use xlink:href="#s-text" class="display-6"></use>
-        <use xlink:href="#s-text" class="display-6"></use>
-        <use xlink:href="#s-text" class="display-6"></use>
-        <use xlink:href="#s-text" class="display-6"></use>
-        <use xlink:href="#s-text" class="display-6"></use>
-    </svg></div>
-    
+    <div class="container">
+        <svg viewBox="0 0 600 300">
+            <!-- Symbol-->
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="50%" dy=".35em">BOOTSTRAP FORM</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use xlink:href="#s-text" class="display-6"></use>
+            <use xlink:href="#s-text" class="display-6"></use>
+            <use xlink:href="#s-text" class="display-6"></use>
+            <use xlink:href="#s-text" class="display-6"></use>
+            <use xlink:href="#s-text" class="display-6"></use>
+        </svg>
+    </div>
+
     <div id="msgToUsr"></div>
     <form id="myForm">
         <div class="breadcrumb">
@@ -140,18 +142,15 @@
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-14">Email:</label>
-            <input class="form-control" type="email" name="email" placeholder="example@domain.com" id="field-14"
-            />
+            <input class="form-control" type="email" name="email" placeholder="example@domain.com" id="field-14" />
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-15"> Nomor Telepon:</label>
-            <input class="form-control" type="text" name="phone" onchange="clearIt(this)" placeholder="+628910111213"
-                id="field-15" />
+            <input class="form-control" type="text" name="phone" onchange="clearIt(this)" placeholder="+628910111213" id="field-15" />
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-16"> Twitter atau Facebook:</label>
-            <input class="form-control" type="text" name="sosmed" onchange="clearIt(this)"
-                placeholder="username" id="field-16" />
+            <input class="form-control" type="text" name="sosmed" onchange="clearIt(this)" placeholder="username" id="field-16" />
         </div>
         <div class="breadcrumb">
             <span class="btn btn-primary">5</span>
@@ -159,23 +158,19 @@
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-17">CV (pdf/doc/jpeg only):</label>
-            <input class="form-control" type="file" name="myFile1" onchange="clearIt(this)"
-                id="field-17" />
+            <input class="form-control" type="file" name="myFile1" onchange="clearIt(this)" id="field-17" />
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-18"> Sertifikat Panitia Kegiatan (scan):</label>
-            <input class="form-control" type="file" name="myFile2" onchange="clearIt(this)"
-                id="field-18" />
+            <input class="form-control" type="file" name="myFile2" onchange="clearIt(this)" id="field-18" />
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-19"> Sertifikat Organisasi (scan):</label>
-            <input class="form-control" type="file" name="myFile3" onchange="clearIt(this)"
-                id="field-19" />
+            <input class="form-control" type="file" name="myFile3" onchange="clearIt(this)" id="field-19" />
         </div>
         <div class="form-group col-auto">
             <label class="form-control-label" for="field-20"> Penghargaan (scan):</label>
-            <input class="form-control" type="file" name="myFile4" onchange="clearIt(this)" id="field-20"
-            />
+            <input class="form-control" type="file" name="myFile4" onchange="clearIt(this)" id="field-20" />
         </div>
         <input class="btn btn-secondary btn-lg btn-block" type="button" value="Apply" onmouseup="submitForm(this.parentNode)" />
     </form>
