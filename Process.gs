@@ -1,9 +1,9 @@
 function processForm(theForm) {
-    var allTheData, doc, doc2, doc3, doc4, fileBlob, fileBlob2, fileBlob3, fileBlob4, folder, name, sheet, targetRange, template;
+    var allTheData, doc, doc2, doc3, doc4, fileBlob, fileBlob2, fileBlob3, fileBlob4, folder, name, sheet, targetRange, template, folders;
     var name, birthdate, birthplace, gender, marital, address, trip, belief, qualification, educational, subject, profiency, grade, email, phone, sosmed, myFile1;
     var fileUrl, fileUrl2, fileUrl3, fileUrl4;
     var arrayOfNamesToWriteToSS, i, L, outerArray, innerArray, thisKey, TS;
-
+    var nama = theForm.name; 
     arrayOfNamesToWriteToSS = ['name', 'birthdate', 'birthplace', 'gender', 'marital', 'address', 'trip', 'belief', 'qualification', 'educational', 'subject', 'profiency', 'grade', 'email', 'phone', 'sosmed', 'myFile1'];
     L = arrayOfNamesToWriteToSS.length;
 
@@ -18,7 +18,8 @@ function processForm(theForm) {
     Logger.log(fileBlob4)
 
     if (folderId) {
-        folder = DriveApp.getFolderById(folderId);
+        folders = DriveApp.getFolderById(folderId);
+        folder = folders.createFolder(nama);
     } else {
         folder = DriveApp.getRootFolder();
     };
