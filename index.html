@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <base target="_top">
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?!= HtmlService.createHtmlOutputFromFile('maincss').getContent(); ?>
-    <?!= HtmlService.createHtmlOutputFromFile('loadingcss').getContent(); ?>
-</head>
-
-<body>
+    <?!= HtmlService.createHtmlOutputFromFile('main_css').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('spinner_css').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('print_css').getContent(); ?>
+  </head>
+  <body>
     <?!= HtmlService.createHtmlOutputFromFile('body').getContent(); ?>
-</body>
-	<?!= HtmlService.createHtmlOutputFromFile('mainjs').getContent(); ?>
-    <?!= HtmlService.createHtmlOutputFromFile('loadingjs').getContent(); ?>
-    <div id="idLoad" class="spinner"></div>
-
+  </body>
+  
+  <?!= HtmlService.createHtmlOutputFromFile('form_js').getContent(); ?>
+  <?!= HtmlService.createHtmlOutputFromFile('spinner_js').getContent(); ?>
+  
+  <div id="idSpnr" class="spinner"></div>
 </html>

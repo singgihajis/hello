@@ -1,0 +1,24 @@
+<script>
+window.loadingPage_shwSpnr = function (a, b) {
+    loadingPage_displayinline(a);
+    var dotLoader = '<img class="img-fluid mx-auto d-block" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif">';
+    loadingPage_inHtml(a, dotLoader);
+};
+
+window.loadingPage_hideSpnr = function (a, b) {
+    loadingPage_inHtml(a, "");
+    loadingPage_hide(a);
+};
+
+window.loadingPage_displayinline = function (a) {
+    document.getElementById(a).style.display = "inline";
+};
+
+window.loadingPage_inHtml = function (a, b) {
+    document.getElementById(a).innerHTML = b;
+};
+
+window.loadingPage_hide = function (a) {
+    document.getElementById(a).style.display = "none";
+};
+</script>
